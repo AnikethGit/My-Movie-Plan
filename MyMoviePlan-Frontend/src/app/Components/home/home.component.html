@@ -1,0 +1,158 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-6 mx-auto">
+            <h4>What are you looking for?</h4>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><img src="assets/Images/search-icon.png" alt=""></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Search for movies, plays and more..."
+                    [(ngModel)]="name" (keydown.enter)="onSearch(name)">
+            </div>
+        </div>
+    </div>
+</div><br>
+<div id="img" class="carousel slide" data-ride="carousel">
+
+    <ul class="carousel-indicators">
+        <li data-target="#img" data-slide-to="0" class="active"></li>
+        <li data-target="#img" data-slide-to="1"></li>
+        <li data-target="#img" data-slide-to="2"></li>
+        <li data-target="#img" data-slide-to="3"></li>
+    </ul>
+
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="assets/Images/drishyam2.jpg" alt="pic1.jpg">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/Images/johnwick4.jpg" alt="pic2.jpg">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/Images/popesexorcist.jpg" alt="pic3.jpg">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/Images/mummies.jpg" alt="pic4.jpg">
+        </div>
+    </div>
+
+
+    <a class="carousel-control-prev" href="#img" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#img" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div><br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h3 class="ml-4 pl-5">Browse Movies</h3>
+            <br>
+            <h6 class="ml-4 pl-5">By Genre</h6>
+        </div>
+    </div>
+</div>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col mb-5">
+            <div id="product" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card-deck col-11 mx-auto">
+                            <div class="card bg-light">
+                                <img class="card-img-top" src="assets/Images/comedy.jpg" alt="cardiac.png"
+                                    style="width:100%; height:130px;">
+                                <div class="card-body text-center mt-1">
+                                    <a routerLink="/show/product/class/{{movie[0]}}">Comedy</a>
+                                </div>
+                            </div>
+                            <div class="card bg-light">
+                                <img class="card-img-top" src="assets/Images/action.png" alt="diabetic.png"
+                                    style="width:100%; height:130px;">
+
+                                <div class="card-body text-center mt-1">
+                                    <a routerLink="/show/product/class/{{movie[1]}}">Action</a>
+                                </div>
+                            </div>
+                            <div class="card bg-light">
+                                <img class="card-img-top" src="assets/Images/romance.jpg" alt="gastro.png"
+                                    style="width:100%; height:130px;">
+
+                                <div class="card-body text-center mt-1">
+                                    <a routerLink="/show/product/class/{{movie[2]}}">Romance</a>
+                                </div>
+                            </div>
+
+                            <div class="card bg-light">
+                                <img class="card-img-top" src="assets/Images/kids.png" alt="urology.png"
+                                    style="width:100%; height:130px;">
+
+                                <div class="card-body text-center mt-1">
+                                    <a routerLink="/show/product/class/{{movie[3]}}">Kids</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-deck col-11 mx-auto">
+
+                            <div class="card bg-light">
+                                <img class="card-img-top" src="assets/Images/sandt.jpg" alt="ai.png"
+                                    style="width:100%; height:130px;">
+
+                                <div class="card-body text-center mt-1">
+                                    <a routerLink="/show/product/class/{{movie[4]}}">Suspense and Thriller</a>
+                                </div>
+                            </div>
+
+                            <div class="card bg-light">
+                                <img class="card-img-top" src="assets/Images/horror.jpg" alt="gynaecology.png"
+                                    style="width:100%; height:130px;">
+
+                                <div class="card-body text-center mt-1">
+                                    <a routerLink="/show/product/class/{{movie[5]}}">Horror</a>
+                                </div>
+                            </div>
+
+                            <div class="card bg-light">
+                                <img class="card-img-top" src="assets/Images/drama.png" alt="ortho.png"
+                                    style="width:100%; height:130px;">
+
+                                <div class="card-body text-center mt-1">
+                                    <a routerLink="/show/product/class/{{movie[6]}}">Drama</a>
+                                </div>
+                            </div>
+
+                            <div class="card bg-light">
+                                <img class="card-img-top" src="assets/Images/animation.jpg" alt="vitamins.png"
+                                    style="width:100%; height:130px;">
+
+                                <div class="card-body text-center mt-1">
+                                    <a routerLink="/show/product/class/{{movie[7]}}">Sci-fi</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <a class="carousel-control-prev" href="#product" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+
+
+                    <a class="carousel-control-next" href="#product" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

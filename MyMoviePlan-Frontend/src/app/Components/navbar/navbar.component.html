@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand" routerLink="/"><img src="assets/Images/MyMoviePlan.jpg" alt="Logo"
+                style="width:50px;height: 50px;"></a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" style="color: whitesmoke;" routerLink="/get/all/class/All-Medicines">Movies<span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: whitesmoke;" href="#">Shows</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: whitesmoke;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Plays
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Drama</a>
+                    <a class="dropdown-item" href="#">Romantic</a>
+                    <a class="dropdown-item" href="#">Comedy</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: whitesmoke;" href="#">Reviews</a>
+            </li>
+
+
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-1">
+                <a routerLink="/get/cart/details" role="button" class="btn btn-info"><small>Cart total: {{totalPrice |
+                        currency:
+                        'INR'}} </small> <i class='fas fa-cart-arrow-down'></i>&nbsp;<span
+                        class="badge badge-danger">{{totalQuantity}}</span></a>
+            </li>
+            <li class="nav-item mr-1">
+                <a *ngIf="!loginService.isLoggedIn()" routerLink="/user/signup" role="button" class="btn btn-link">Sign
+                    Up</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="!loginService.isLoggedIn()" routerLink="/user/login" role="button"
+                    class="btn btn-outline-success">Login</a>
+            </li>
+            <li class="nav-item mr-1">
+                <a class="btn btn-link" style="color: whitesmoke;" *ngIf="loginService.isLoggedIn()" role="button" (click)="home()"><b>Home</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-info" *ngIf="loginService.isLoggedIn()" role="button" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
