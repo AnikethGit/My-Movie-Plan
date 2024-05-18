@@ -1,4 +1,4 @@
-# Capstone Project - My Movie Plan
+# My Movie Plan
 ## Project Background
 NMS Cinemas is a chain of single screen theatres that screen movie shows of different genres and languages at very genuine prices. It was established in 2004 in Pune, India. Recently, the business analysts noticed a decline in sales since 2010. The team decided to develop an online movie ticket booking web application with a rich and user-friendly interface.
 ## Running The Application
